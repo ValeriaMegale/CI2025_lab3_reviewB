@@ -18,7 +18,7 @@ Since the `A_star` function is passed the graph, the check should ideally be upf
 
 def A_star(G, map, start, destination, heuristic):
     
-    # 🌟 FIX 1: Ensure no negative edges exist in the entire graph
+    # FIX 1: Ensure no negative edges exist in the entire graph
     # Check all edges for negative weights before starting
     if any(data.get("weight", 1.0) < 0 for u, v, data in G.edges(data=True)):
         # This graph state invalidates A*. Returning specific error status.
@@ -64,7 +64,7 @@ def A_star(G, map, start, destination, heuristic):
     while open_list:
         f_score_extracted, current = heapq.heappop(open_list)
         
-        # 🌟 FIX 2: Check if extracted f-score is stale (i.e., we've found a better path already)
+        # FIX 2: Check if extracted f-score is stale (i.e., we've found a better path already)
         if f_score_extracted > f_scores[current]:
              continue # Discard stale entry.
         
