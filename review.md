@@ -1,5 +1,5 @@
 
-### I. Conceptual Weaknesses and Suggested Fixes
+###  Conceptual Weaknesses and Suggested Fixes
 
 #### 1\. Ensuring A\* Optimality by Upholding Non-Negativity Constraint
 
