@@ -47,7 +47,7 @@ However, the `open_set` only tracks membership, not the $f$-score value, meaning
 
 **Theoretical Flaw:** The most efficient and standard way to handle stale entries is to check the node's currently stored $g$-score against the extracted $f$-score *at the time of extraction*.
 
-**Justification for Fix:** By checking if the extracted $f$-score matches the latest $f$-score recorded in the dictionary ($\text{f\_scores}[\text{current}]$), we simplify the logic by allowing multiple entries for the same node in the heap, but discarding all but the best one at the time of extraction.
+**Justification for Fix:** By checking if the extracted $f$-score matches the latest $f$-score recorded in the dictionary, we simplify the logic by allowing multiple entries for the same node in the heap, but discarding all but the best one at the time of extraction.
 
 **Implementation of Fix 2 (Efficient Stale Entry Handling):**
 
